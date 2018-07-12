@@ -32,8 +32,7 @@ li {
     width: 510px;
     position: relative;
 }
-
-#hexagon {
+.hexagon {
     top: -10px;
     left: 49%;
     width: 11px;
@@ -42,7 +41,7 @@ li {
     position: absolute;
     margin: auto;
 }
-#hexagon:before {
+.hexagon:before {
     content: "";
     position: absolute;
     top: 0;
@@ -53,7 +52,7 @@ li {
     border-right: 7px solid #262626;
     border-bottom: 10px solid transparent;
 }
-#hexagon:after {
+.hexagon:after {
     content: "";
     position: absolute;
     right: 0;
@@ -64,7 +63,23 @@ li {
     border-bottom: 10px solid transparent;
     border-top: 10px solid transparent;
 }
-
+.red {
+    border-color: #ff0036;
+    background: #ff0036;
+}
+.red:before {
+    border-right: 7px solid #ff0036;
+}
+.red:after {
+    border-left: 7px solid #ff0036;
+}
+.bg {
+    background: #262626;
+}
+.creativia_title {
+    padding: 100px 0 100px 0;
+    margin: 0 auto;
+}
 /*Header section*/
 header {
     background-color:  #131313;
@@ -269,4 +284,54 @@ nav {
     border-top: 1px solid #262626;
     border-right: 1px solid #262626;
     transform: rotate(45deg);
+}
+/*Portfolio section*/
+.portfolio_tab {
+    display: flex;
+}
+.portfolio h1{
+    color:  #ffffff;
+    font-size: 1.875em;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+}
+.portfolio_tab a {
+    text-transform: uppercase;
+    color:  #a4a4a4;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.375;
+    padding-top: 27px;
+    padding-right: 14px;
+}
+.portfolio_tab a:last-child {
+    padding-right: 0;
+}
+.portfolio_tab a:hover
+{
+    color: #ff0036;
+}
+.portfolio_example_1 {
+    width: 400px;
+    height: 350px;
+    background: #f39943;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #262626;
+}
+.portfolio_example_2 {
+    width: 300px;
+    height: 350px;
+    background: #56cc82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #262626;
+}
+.portfolio_tab_items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1450px;
+    padding-bottom: 110px;
 }
