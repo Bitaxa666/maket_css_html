@@ -1,0 +1,272 @@
+/*All document specification*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color:  #505050;
+}
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+li {
+    list-style-type: none;
+}
+.container {
+    width: 1170px; /*for responsive add in % */
+    display: flex;
+    margin: auto;
+}
+.lato_font {
+    font-family: 'Lato', sans-serif;
+}
+.btn {
+    border: 1px solid #ff0036;
+}
+.footer_line {
+    border: 1px solid #262626;
+    margin: auto;
+    width: 510px;
+    position: relative;
+}
+
+#hexagon {
+    top: -10px;
+    left: 49%;
+    width: 11px;
+    height: 20px;
+    background: #262626;
+    position: absolute;
+    margin: auto;
+}
+#hexagon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 7px solid #262626;
+    border-bottom: 10px solid transparent;
+}
+#hexagon:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 11px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid #262626;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+/*Header section*/
+header {
+    background-color:  #131313;
+}
+.logo_header {
+    border: 2px solid #ff0036;
+    padding: 20px 60px;
+}
+.logo_header a {
+    color:  #ffffff;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+.top_menu {
+    display: flex;
+}
+#menuToggle_checkbox {
+    display: none; /*no visible on the large size*/
+}
+.top_menu a {
+    color:  #a4a4a4;
+    font-size: 1.125em;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-right: 38px;
+}
+.top_menu a:first-child {
+    padding-left: 98px;
+}
+.top_menu a:last-child {
+    padding-right: 0;
+}
+.top_menu li{
+    position: relative;
+}
+.top_menu li:after {
+    width: 27px;
+    border-bottom: 2px solid #ff0036;
+    padding-top: 26px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*Header slider section*/
+.header_slider {
+    background: #a4a4a4 url(../img/header_img1.png) no-repeat bottom / cover;
+    display: flex;
+    flex-direction: column;
+}
+.slogan1 h1{
+    padding-top: 195px;
+    text-align: center;
+    color: #ff0036;
+    font-size: 1.875em;
+    font-weight: 700;
+}
+.slogan1 h1 > span{
+    color: #ffffff;
+}
+.header_text {
+    text-align: center;
+    margin: 46px auto 50px auto;
+    color:  #ffffff;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.375;
+    width: 1021px;
+}
+.header_btn_part {
+    text-align: center;
+    display: flex;
+    margin: 0 auto 193px auto;
+    width: 380px;
+    justify-content: space-between;
+}
+.features_btn {
+    border: 1px solid #ff0036;
+    background: #ff0036;
+    text-transform: uppercase;
+    color:  #ffffff;
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 18px 35px 18px 35px;
+}
+.free_psd_btn {
+    border: 1px solid #131313;
+    background: #131313;
+    text-transform: uppercase;
+    color:  #ffffff;
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 18px 35px 18px 35px;
+}
+/*ABout section*/
+.about_creativia_title {
+    padding: 100px 0 100px 0;
+    margin: 0 auto;
+}
+.about_creativia_title h1{
+    color:  #ff0036;
+    font-size: 1.875em;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.about_creativia_title h1 > span{
+    color: #262626;
+}
+.about_creativia_title p{
+    color:  #505050;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.375;
+    margin: auto;
+    width: 80%;
+}
+.about_creativia_title p > span{
+    color: #ff0036;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.375;
+}
+.about_creativia_description {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 110px;
+}
+.about_creativia_description_left_part {
+    width: 566px;
+}
+.about_creativia_description_left_part p{
+    color:  #505050;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.475;
+}
+.about_creativia_description_right_part {
+    width: 570px;
+    display: flex;
+    justify-content: center;
+}
+/*Our advantage section*/
+.our_advantages_items {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 100px 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.our_advantages_item {
+    width: 260px;
+    text-align: center;
+}
+.our_advantages_icon {
+    margin: auto;
+}
+.our_advantages_item h1{
+    text-transform: uppercase;
+    color:  #262626;
+    font-size: 1.25em;
+    font-weight: 500;
+    padding: 31px 0 27px 0;
+}
+.our_advantages_item > span{
+    color:  #505050;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.375;
+}
+.our_advantages_icon {
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    padding: 24px;
+    margin: auto;
+    width: 40px;
+    height: 80px;
+    position: relative;
+    background: transparent;
+}
+.our_advantages_icon:before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -46px;
+    width: 90px;
+    height: 90px;
+    border-left: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    transform: rotate(45deg);
+}
+.our_advantages_icon:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 43px;
+    width: 90px;
+    height: 90px;
+    border-top: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transform: rotate(45deg);
+}
