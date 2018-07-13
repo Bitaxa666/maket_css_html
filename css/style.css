@@ -24,7 +24,12 @@ li {
     font-family: 'Lato', sans-serif;
 }
 .btn {
-    border: 1px solid #ff0036;
+    border: 1px solid #131313;
+    background: #131313;
+}
+.btn:hover {
+    background-color: #ff0036;
+    border: 1px solid #ff0036;;
 }
 .footer_line {
     border: 1px solid #262626;
@@ -85,8 +90,59 @@ header {
     background-color:  #131313;
 }
 .logo_header {
-    border: 2px solid #ff0036;
+    border-top: 2px solid #ff0036;
     padding: 20px 60px;
+    position: relative;
+}
+.logo_header:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 17px;
+    width: 90px;
+    height: 90px;
+    border-bottom: 2px solid #ff0036;
+    transform: rotate(45deg);
+}
+.logo_header:after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    right: -46px;
+    width: 90px;
+    height: 90px;
+    border-bottom: 2px solid #ff0036;
+    transform: rotate(135deg);
+}
+.logo_bottom {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 62px;
+    width: 79px;
+    height: 90px;
+    border-bottom: 2px solid #ff0036;
+    transform: rotate(0deg);
+}
+.logo_bottom:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 115px;
+    width: 53px;
+    height: 0;
+    border-bottom: 2px solid #ff0036;
+    transform: rotate(90deg);
+}
+.logo_bottom:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 54px;
+    height: 0;
+    border-bottom: 2px solid #ff0036;
+    transform: rotate(90deg);
 }
 .logo_header a {
     color:  #ffffff;
@@ -116,16 +172,28 @@ nav {
 .top_menu a:last-child {
     padding-right: 0;
 }
-.top_menu li{
+.top_menu li {
     position: relative;
 }
+/*как бы его выровнять по центру не используюя нс-чилд селекторы?*/
+/*.top_menu li:after - нельзя применить и before:hover одновременно??*/
 .top_menu li:after {
+    content: "";
     width: 27px;
     border-bottom: 2px solid #ff0036;
-    padding-top: 26px;
+    padding-top: 0;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 42px;
+    left: 33%;
+}
+.top_menu li:before {
+    content: "";
+    width: 27px;
+    border-bottom: 2px solid #ff0036;
+    padding-top: 0;
+    position: absolute;
+    top: -20px;
+    left: 33%;
 }
 /*Header slider section*/
 .header_slider {
@@ -133,6 +201,13 @@ nav {
     display: flex;
     flex-direction: column;
 }
+/*Как затемнить фон*/
+/*.header_slider:after {
+    content: "";
+    background: #131313 no-repeat bottom / cover;
+    opacity: 0.7;
+    width: 100%;
+}*/
 .slogan1 h1{
     padding-top: 195px;
     text-align: center;
@@ -160,8 +235,6 @@ nav {
     justify-content: space-between;
 }
 .features_btn {
-    border: 1px solid #ff0036;
-    background: #ff0036;
     text-transform: uppercase;
     color:  #ffffff;
     font-size: 1.25em;
@@ -169,8 +242,6 @@ nav {
     padding: 18px 35px 18px 35px;
 }
 .free_psd_btn {
-    border: 1px solid #131313;
-    background: #131313;
     text-transform: uppercase;
     color:  #ffffff;
     font-size: 1.25em;
@@ -197,8 +268,7 @@ nav {
     font-size: 1em;
     font-weight: 700;
     line-height: 1.375;
-    margin: auto;
-    width: 80%;
+    text-align: center;
 }
 .about_creativia_title p > span{
     color: #ff0036;
@@ -224,6 +294,33 @@ nav {
     width: 570px;
     display: flex;
     justify-content: center;
+    position: relative;
+    padding-bottom: 350px;
+}
+/*как затемнить такие сложные фигурки? сделать их темнее*/
+.about_creativia_description_right_part > img:first-child {
+    width: 375px;
+    height: 324px;
+    z-index: 1;
+    position: absolute;
+    top: 25px;
+    left: 26px;
+}
+.about_creativia_description_right_part > img:nth-child(2) {
+    width: 375px;
+    height: 324px;
+    z-index: 1;
+    position: absolute;
+    top: 25px;
+    left: 210px;
+}
+.about_creativia_description_right_part > img:last-child {
+    width: 412px;
+    height: 366px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 100px;
 }
 /*Our advantage section*/
 .our_advantages_items {
@@ -266,25 +363,41 @@ nav {
 .our_advantages_icon:before {
     content: "";
     position: absolute;
-    top: 18px;
-    left: -46px;
-    width: 90px;
-    height: 90px;
+    top: -7px;
+    left: -22px;
+    height: 77px;
     border-left: 1px solid #262626;
-    border-bottom: 1px solid #262626;
-    transform: rotate(45deg);
+    transform: rotate(33deg);
 }
 .our_advantages_icon:after {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 43px;
-    width: 90px;
-    height: 90px;
-    border-top: 1px solid #262626;
+    top: 58px;
+    left: -21px;
+    height: 76px;
     border-right: 1px solid #262626;
-    transform: rotate(45deg);
+    transform: rotate(146deg);
 }
+.our_advantages_icon span:before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 108px;
+    height: 76px;
+    border-right: 1px solid #262626;
+    transform: rotate(213deg);
+}
+.our_advantages_icon span:after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -21px;
+    height: 76px;
+    border-right: 1px solid #262626;
+    transform: rotate(147deg);
+}
+/*Как бы ты вытаскивала иконки с этого макета?
+*/
 /*Portfolio section*/
 .portfolio_tab {
     display: flex;
