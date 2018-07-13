@@ -195,6 +195,9 @@ nav {
     top: -20px;
     left: 33%;
 }
+.top_menu li:hover {
+    color: white;
+}
 /*Header slider section*/
 .header_slider {
     background: #a4a4a4 url(../img/header_img1.png) no-repeat bottom / cover;
@@ -445,6 +448,7 @@ nav {
 .portfolio_tab_items {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
     width: 1450px;
     padding-bottom: 110px;
 }
