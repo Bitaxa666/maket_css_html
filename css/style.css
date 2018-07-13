@@ -200,7 +200,7 @@ nav {
 }
 /*Header slider section*/
 .header_slider {
-    background: #a4a4a4 url(../img/header_img1.png) no-repeat bottom / cover;
+    background: #a4a4a4 url(../img/header_img1.png) no-repeat bottom / cover; /*как в таких случаях лучше делать - ковер или убрать и оставить по бокам поля*?если картинка сильно налазит на большом экране??*/
     display: flex;
     flex-direction: column;
 }
