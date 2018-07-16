@@ -1,10 +1,17 @@
 @media screen and (max-width: 1000px) {
     /*Mobile menu*/
+    .container {
+        width: 92%;
+        padding: 0 3% 0 3%; /*почему паддинг добавляет скрол в бок для контейнера? я же задаю ширину 100%*/
+    }
     header .container{
         display:block;
     }
     .logo_header {
-        width: 7%;
+        width: 9%;
+    }
+    .logo_header:after {
+        right: -44px;
     }
     nav {
         margin: 5px 0 0 40%;
@@ -111,10 +118,9 @@
         margin-left: -47%;
     }
     #menuToggle input:checked ~ .top_menu a {
-        color:  #a4a4a4;
+
         font-size: 1em;
         font-weight: 900;
-        text-transform: uppercase;
         padding-bottom: 12px;
     }
     #menuToggle input:checked ~ .top_menu li:after {
@@ -131,6 +137,83 @@
     }
     #menuToggle input:checked ~ #menuToggle {
         padding-top: 14%;
+    }
+    /*Header section*/
+    .header_text {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    /*About section*/
+    .about_creativia_description {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10%;
+    }
+    .about_creativia_description_left_part {
+        width: 40%;
+        padding-right: 5%;
+    }
+    .about_creativia_description_left_part p{
+        color:  #505050;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.475;
+    }
+    .about_creativia_description_right_part {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-bottom: 33%;
+    }
+    /*как затемнить такие сложные фигурки? сделать их темнее*/
+    .about_creativia_description_right_part > img:first-child {
+        width: 50%;
+        height: 73%;
+        z-index: 1;
+        position: absolute;
+        top: 7%;
+        left: 6%;
+    }
+    .about_creativia_description_right_part > img:nth-child(2) {
+        width: 50%;
+        height: 73%;
+        z-index: 1;
+        position: absolute;
+        top: 7%;
+        left: 39%;
+    }
+    .about_creativia_description_right_part > img:last-child {
+        width: 60%;
+        height: 88%;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+    /*Portfolio section*/
+    .portfolio_example_1 {
+        width: 30%;
+        background: #f39943;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #262626;
+    }
+    .portfolio_example_2 {
+        width: 25%;
+        background: #56cc82;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #262626;
+    }
+    .portfolio_tab_items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        padding-bottom: 6%;
     }
 
 }
