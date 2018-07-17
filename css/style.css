@@ -339,6 +339,9 @@ nav {
 }
 .our_advantages_icon {
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .our_advantages_item h1{
     text-transform: uppercase;
@@ -452,3 +455,13 @@ nav {
     width: 1450px;
     padding-bottom: 110px;
 }
+
+
+/*правки по слайдеру*/
+.two, .three {
+    display: none;
+}
+
+/*    border-left: 50px solid rebeccapurple; сменивать по внутрености картинок
+сервис воркер посмотреть
+*/

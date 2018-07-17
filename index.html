@@ -39,15 +39,15 @@
                     <span></span>
 
                     <ul class="top_menu" id="top_menu">
-                        <!-- Сначала идет LI а потом ссылка -->
-                        <a href="#"><li>home</li></a>
-                        <a href="#"><li>about us</li></a>
-                        <a href="#"><li>portfolio</li></a>
-                        <a href="#"><li>clients</li></a>
-                        <a href="https://github.com/Bitaxa666" target="_blank"><li>team</li></a>
-                        <a href="#"><li>services</li></a>
-                        <a href="#"><li>blog</li></a>
-                        <a href="#"><li>contact</li></a>
+                        <!--first changes: links were changed to <li><a><a/></li> -->
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">clients</a></li>
+                        <li><a href="https://github.com/Bitaxa666" target="_blank">team</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -55,7 +55,7 @@
     </header>
     <main>
         <section class="top_slider">
-            <div class="header_slider">
+            <div class="header_slider one">
                 <!--<img src="img/header_img1.png">-->
                 <!--<img src="img/header_img1.png">
                 <img src="img/header_img1.png">-->
@@ -71,8 +71,33 @@
                         <div class="btn free_psd_btn">
                             free psd
                         </div>
+                        <div class="btn free_psd_btn next_img_show"> <!-- positon absolut для кнопок слайдера -->
+                            next
+                        </div>
                     </div>
-
+                </div>
+            </div>
+            <div class="header_slider two">
+                <!--<img src="img/header_img1.png">-->
+                <!--<img src="img/header_img1.png">
+                <img src="img/header_img1.png">-->
+                <div class="slogan1">
+                    <h1><span>2why</span> creativia ? </h1>
+                    <div class="header_text lato_font">
+                        <p>2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae,</p>
+                    </div>
+                    <div class="header_btn_part">
+                        <div class="btn features_btn">
+                            features
+                        </div>
+                        <div class="btn free_psd_btn">
+                            free psd
+                        </div>
+                        <div class="btn free_psd_btn">
+                            next
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -109,7 +134,7 @@
                 <div class="our_advantages_items">
                     <div class="our_advantages_item">
                         <div class="our_advantages_icon">
-                            <i class="far fa-heart" style="font-size:24px; margin-top: 70%"></i>
+                            <i class="far fa-heart" style="font-size:24px;"></i>
                             <span></span>
                         </div>
                         <h1>flat design</h1>
@@ -215,5 +240,7 @@
         </section>
     </main>
 
+	<script src="./js/jquery.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>
