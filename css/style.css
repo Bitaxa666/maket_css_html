@@ -1,4 +1,8 @@
 /*All document specification*/
+
+/* когда будем знакомится с препроцессорами, выучим что такое переменные, миксины и прочее, тогда твой css можно будет сократить раза в 3*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -72,6 +76,8 @@ li {
     border-color: #ff0036;
     background: #ff0036;
 }
+
+/* сокращай такие конструкции,выноси общее, уменьшай объем файла,  к примеру .red:before, .red:after {} */
 .red:before {
     border-right: 7px solid #ff0036;
 }
@@ -156,6 +162,7 @@ nav {
 .top_menu {
     display: flex;
 }
+/* Обычно стараются не использовать id*/
 #menuToggle_checkbox {
     display: none; /*no visible on the large size*/
 }
@@ -353,6 +360,8 @@ nav {
     font-weight: 400;
     line-height: 1.375;
 }
+
+/*Выноси общее*/
 .our_advantages_icon {
     border-top: 1px solid #262626;
     border-bottom: 1px solid #262626;
@@ -399,15 +408,15 @@ nav {
     border-right: 1px solid #262626;
     transform: rotate(147deg);
 }
-/*Как бы ты вытаскивала иконки с этого макета?
-*/
+/*Как бы ты вытаскивала иконки с этого макета?     ---   бывают случаи, когда дизайнер говорит какой набор иконок использовал ( если они в открытом доступе ), а если нет, то скачивала и подключала бы иконки
+    */
 /*Portfolio section*/
 .portfolio_tab {
     display: flex;
 }
 .portfolio h1{
     color:  #ffffff;
-    font-size: 1.875em;/* Приближение из-за подстановки шрифтов */
+    font-size: 1.875em;/* Приближение из-за подстановки шрифтов */ /*это не обязательно копировать))))))*/
     font-weight: 700;
     text-align: center;
 }

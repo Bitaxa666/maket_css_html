@@ -73,7 +73,8 @@
     }
     #menuToggle span:first-child
     {
-        transform-origin: 0% 0%;
+        /* Когда пишут 0 - возле него не ставят, ни % ни px*/
+        transform-origin: 0 0;
     }
 
     #menuToggle span:nth-last-child(2)
@@ -98,6 +99,7 @@
     #menuToggle input:checked ~ span:nth-last-child(3)
     {
         opacity: 0;
+        /* Если у нас есть 0.2 - обычно 0 упускается и остается .2*/
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
@@ -167,6 +169,8 @@
         padding-bottom: 33%;
     }
     /*как затемнить такие сложные фигурки? сделать их темнее*/
+
+    /* Используй css - filter*/
     .about_creativia_description_right_part > img:first-child {
         width: 50%;
         height: 73%;
