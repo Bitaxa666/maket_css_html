@@ -92,6 +92,7 @@ header {
 .logo_header {
     border-top: 2px solid #ff0036;
     padding: 20px 60px;
+    margin-right: 90px;
     position: relative;
 }
 .logo_header:before {
@@ -155,7 +156,11 @@ nav {
 }
 .top_menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
 }
+
 #menuToggle_checkbox {
     display: none; /*no visible on the large size*/
 }
@@ -164,19 +169,19 @@ nav {
     font-size: 1.125em;
     font-weight: 400;
     text-transform: uppercase;
-    padding-right: 38px;
 }
-.top_menu a:first-child {
-    padding-left: 98px;
+.top_menu a:hover {
+    border-bottom: 2px solid red;
+    border-top: 2px solid red;
+    padding: 18px 0 18px 0;
+    margin: auto;
 }
-.top_menu a:last-child {
-    padding-right: 0;
-}
-.top_menu li {
+/*.top_menu li {
     position: relative;
-}
+}*/
 /*как бы его выровнять по центру не используюя нс-чилд селекторы?*/
 /*.top_menu li:after - нельзя применить и before:hover одновременно??*/
+/*
 .top_menu li:after {
     content: "";
     width: 27px;
@@ -194,10 +199,10 @@ nav {
     position: absolute;
     top: -20px;
     left: 33%;
-}
-.top_menu li:hover {
+}*/
+/*.top_menu li:hover {
     color: white;
-}
+}*/
 /*Header slider section*/
 .header_slider {
     background: #a4a4a4 url(../img/header_img1.png) no-repeat bottom / cover; /*как в таких случаях лучше делать - ковер или убрать и оставить по бокам поля*?если картинка сильно налазит на большом экране??*/
@@ -308,6 +313,9 @@ nav {
     position: absolute;
     top: 25px;
     left: 26px;
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+
 }
 .about_creativia_description_right_part > img:nth-child(2) {
     width: 375px;
@@ -316,6 +324,8 @@ nav {
     position: absolute;
     top: 25px;
     left: 210px;
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
 }
 .about_creativia_description_right_part > img:last-child {
     width: 412px;
@@ -336,12 +346,6 @@ nav {
 .our_advantages_item {
     width: 260px;
     text-align: center;
-}
-.our_advantages_icon {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .our_advantages_item h1{
     text-transform: uppercase;
@@ -365,6 +369,15 @@ nav {
     height: 80px;
     position: relative;
     background: transparent;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.our_advantages_icon:hover {
+    border-bottom: 1px solid #ff0036;
+    background: #ff0036;
+    border-top: 1px solid #ff0036;
 }
 .our_advantages_icon:before {
     content: "";
@@ -375,6 +388,11 @@ nav {
     border-left: 1px solid #262626;
     transform: rotate(33deg);
 }
+.our_advantages_icon:hover:before {
+    top: 6px;
+    left: -26px;
+    border-left: 52px solid #ff0036;
+}
 .our_advantages_icon:after {
     content: "";
     position: absolute;
@@ -384,6 +402,11 @@ nav {
     border-right: 1px solid #262626;
     transform: rotate(146deg);
 }
+.our_advantages_icon:hover:after {
+    top: 50px;
+    left: -24px;
+    border-right: 30px solid #ff0036;
+}
 .our_advantages_icon span:before {
     content: "";
     position: absolute;
@@ -391,6 +414,15 @@ nav {
     left: 108px;
     height: 76px;
     border-right: 1px solid #262626;
+    transform: rotate(213deg);
+}
+.our_advantages_icon span:hover::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 108px;
+    height: 76px;
+    border-right: 51px solid #262626;
     transform: rotate(213deg);
 }
 .our_advantages_icon span:after {
@@ -452,7 +484,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 1450px;
+    width: 1380px;
     padding-bottom: 110px;
 }
 
