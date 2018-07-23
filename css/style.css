@@ -108,7 +108,7 @@ li {
 .basic_top_text p {
     color:  #505050;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.375;
     text-align: center;
 }
@@ -1010,8 +1010,80 @@ text-transform: uppercase;
     padding: 26px 0 100px 0;
     line-height: 1.375;
     color: #ffffff;
-
 }
+/*Blog section*/
+.container_blog {
+    width: 966px;
+    display: flex;    
+    margin: auto;
+    margin-bottom: 50px;
+}
+.our_blog .container_blog:nth-child(3){
+    margin-bottom: 40px;
+}
+.description_blog {
+    margin-left: 30px;
+}
+.blog_icon {
+    display: flex;
+}
+.description_blog h3 {
+    color:  #2e2e2e;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.05;
+}
+.description_blog p {
+    width: 567px;
+    margin-top: 23px;
+    margin-bottom: 29px;
+}
+.blog_icons {
+    display: flex;
+}
+.blog_icon {
+    margin: 18px 0 0 0;
+    align-items: center; 
+    display: flex;
+}
+.blog_icon img {
+    width: 13px;
+    height: 16px;     
+}
+/*-------------------------------.blog_icon img:nth-child(2) не применялось к блоку? пришлось через ид*/
+#icon2 img{
+    width: 15px;
+    height: 13px; 
+    margin-left: 16px;   
+}
+#icon3 img{
+    width: 17px;
+    height: 12px; 
+    margin-left: 16px;   
+}
+.blog_icon span {
+    padding-left: 8px;
+    font-family: Lato;
+    color:  #a2a2a2;
+    font-size: 0.75em;  
+    line-height: 2.833;
+    letter-spacing: 0.18em;
+}
+.blog_view_btn {
+    width: 120px;
+}
+.blog_view_btn:hover {
+    background: #ff0036;
+}
+.slider_btn {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2 url(../img/arrow.png) no-repeat center ;
+    border-radius: 50%; 
+    margin: 0 auto 85px auto;    
+}
+
 /*Проверка слайдера*/
 
 #viewport {
