@@ -23,15 +23,22 @@
     <!--Lato fonts -->
     <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
+    <!--Loader library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/jquery.classyloader.min.js"></script>
+
+
 
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo_header">
-                <a href="#">Creativia</a>
-                <div class="logo_bottom"></div>
+                <a href="#">
+                    <img src="img/logo_shape.png">
+                </a>
             </div>
+            <!--как бы перекрыть логотипом слайдеры, что бы немного на него наежал?-->
             <nav role="navigation">
                 <div id="menuToggle">
                     <input id="menuToggle_checkbox" type="checkbox" />
@@ -56,47 +63,23 @@
     </header>
     <main>
         <section class="top_slider">
-            <!-- <div class="header_slider one">
-                <img src="img/header_img1.png">
-                <img src="img/header_img1.png">
-                <img src="img/header_img1.png">
-                <div class="slogan1">
-                    <h1><span>why</span> creativia ? </h1>
-                    <div class="header_text lato_font">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae,</p>
-                    </div>
-                    <div class="header_btn_part">
-                        <div class="btn features_btn">
-                            features
-                        </div>
-                        <div class="btn free_psd_btn">
-                            free psd
-                        </div>
-                       <div class="btn free_psd_btn next_img_show"> positon absolut для кнопок слайдера
-                           next
-                       </div>
-                    </div>
+                <div id="slider">
+                    <a href="#" class="control_next">></a>
+                    <a href="#" class="control_prev"><</a>
+                    <ul>
+                        <li id="slider_number_1">
+                            <div id="slogan_one">
+                                <h1><span>why</span> creativia ? </h1>
+                                <div class="header_text lato_font">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae,</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="background: #aaa;">SLIDE 2</li>
+                        <li>SLIDE 3</li>
+                        <li style="background: #aaa;">SLIDE 4</li>
+                    </ul>
                 </div>
-            </div> -->
-            <div id="viewport">
-	            <ul id="slidewrapper">
-	                <li class="slide">
-                        <img src="img/header_img1.png" alt="1" class="slide-img">
-                        <h1><span>why</span> creativia ? </h1>
-                    </li>
-	                <li class="slide"><img src="https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg" alt="2" class="slide-img"></li>
-	            </ul>
-	            <div id="prev-next-btns">
-	                <div id="prev-btn"><span></span></div>
-	                <div id="next-btn"><span></span></div>
-	            </div>
-	            <!-- <ul id="nav-btns">
-	                <li class="slide-nav-btn"></li>
-	                <li class="slide-nav-btn"></li>
-	                <li class="slide-nav-btn"></li>
-	                <li class="slide-nav-btn"></li>
-	                        	</ul> -->
-            </div>
         </section>
         <section class="about_creativia">
             <div class="basic_top_text about_creativia_title">
@@ -391,22 +374,22 @@
             <div class="container">
                 <div class="skills_items">
                     <div class="skills_item">
-                        <h1>90<span>%</span></h1>
+                        <canvas class="loader" id="90"></canvas>
                         <h2>photoshop</h2>
                         <p>Donec luctus tortor in placerat faucibus</p>
                     </div>
                     <div class="skills_item">
-                        <h1>80<span>%</span></h1>
+                        <canvas class="loader" id="80"></canvas>
                         <h2>photoshop</h2>
                         <p>Donec luctus tortor in placerat faucibus</p>
                     </div>
                     <div class="skills_item">
-                        <h1>70<span>%</span></h1>
+                        <canvas class="loader" id="70"></canvas>
                         <h2>photoshop</h2>
                         <p>Donec luctus tortor in placerat faucibus</p>
                     </div>
                     <div class="skills_item">
-                        <h1>90<span>%</span></h1>
+                        <canvas class="loader" id="98"></canvas>
                         <h2>photoshop</h2>
                         <p>Donec luctus tortor in placerat faucibus</p>
                     </div>
@@ -535,7 +518,8 @@
                             <a href="#">order now</a>
                         </div>
                     </div>
-                </div>                
+                </div>
+            </div>
         </section>
         <section class="twitter_section">
             <div class="left_icon">
@@ -577,12 +561,12 @@
                             <img src="img/blog_user.png" alt="blog_user">
                             <span>admin</span> 
                         </div>  
-                        <div class="blog_icon" id="icon2">
+                        <div class="blog_icon" id="icon21">
                             <img  src="img/blog_comment.png" alt="blog_comment">
                             <span>1205</span>
                         </div>    
-                        <div class="blog_icon" id="icon3">
-                            <img id="icon2" src="img/blog_view.png" alt="blog_comment">
+                        <div class="blog_icon" id="icon31">
+                            <img id="icon22" src="img/blog_view.png" alt="blog_comment">
                             <span>203</span>
                         </div>                 
                     </div>
@@ -601,7 +585,7 @@
                             <img src="img/blog_user.png" alt="blog_user">
                             <span>admin</span> 
                         </div>  
-                        <div class="blog_icon" id="icon2">
+                        <div class="blog_icon" id="icon211">
                             <img  src="img/blog_comment.png" alt="blog_comment">
                             <span>1205</span>
                         </div>    
@@ -677,7 +661,7 @@
         </footer>
     </main>
 
-	<script src="./js/jquery.js"></script>
+	<!--<script src="./js/jquery.js"></script>-->
 	<script src="./js/main.js"></script>
 </body>
 </html>
